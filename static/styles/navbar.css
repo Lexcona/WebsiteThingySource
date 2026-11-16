@@ -1,0 +1,54 @@
+@import url("/styles/pallets/catppuccin/mocha.css");
+
+
+#navbar {
+    background-color: var(--mantle);
+    /*
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    */
+    /*
+    border-radius: 5px;
+    */
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: flex-start;
+}
+
+.home-page #navbar {
+    justify-content: center;
+}
+
+.navbar-button { 
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    
+}
+
+.navbar-button-thing {
+    /*
+    padding-left: 5px;
+    padding-right: 5px;
+    */
+    padding-top: 1px;
+    padding-bottom: 16px;
+    width: 100px;
+    
+    /*
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    */
+}
+
+.navbar-button-thing:hover{
+    background-color: var(--surface-0);
+}

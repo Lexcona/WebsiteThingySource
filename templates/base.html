@@ -1,0 +1,28 @@
+{# templates/base.html #}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    <link rel="stylesheet" href="{{ get_url(path="styles/index.css") }}">
+    <link rel="stylesheet" href="{{ get_url(path="styles/navbar.css") }}">
+    <link rel="stylesheet" href="{{ get_url(path="styles/background.css") }}">
+
+
+    <script defer src="{{ get_url(path="scripts/cat-face-spawner.js") }}"></script>
+
+    <link id="favicon" rel="shortcut icon" type="image/jpg" href="https://avatars.githubusercontent.com/u/229240464?v=4" />
+  </head>
+
+  <body class="{% block body_class %}{% endblock body_class %}">
+    {% include "parts/background.html" %}
+    {% include "parts/navbar.html" %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+  </body>
+</html>

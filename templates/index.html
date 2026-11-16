@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{% if section.title %}{{ section.title }}{% else %}{{ config.title }}{% endif %}{% endblock title %}
+
+{% block body_class %}home-page{% endblock body_class %}
+
+{% block content %}
+  <div class="content">
+    {{ section.content | safe }}
+  </div>
+{% endblock content %}
