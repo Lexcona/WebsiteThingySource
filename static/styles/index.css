@@ -38,9 +38,9 @@ main {
     text-align: center;
 }
 
-h1 {
-    font-size: 4rem;
+.home-page h1 {
     text-shadow: 0 0 15px var(--mauve);
+    font-size: 4rem;
 }
 
 p {
