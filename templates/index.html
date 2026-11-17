@@ -5,7 +5,20 @@
 {% block body_class %}home-page{% endblock body_class %}
 
 {% block content %}
-  <div class="content">
-    {{ section.content | safe }}
+  <div id="avatarCard">
+    <div id="avatarCardProfile">
+      <img id="profile-picture" src="https://avatars.githubusercontent.com/u/229240464?v=4" width="100" height="100">
+      <div id="#avatarCardProfileNameDescription">
+        <h2>Lexcona</h2>
+        <p id="avatarCardDescriptionText">Hello World :3</p>
+      </div>
+    </div>
+    <div id="social-links">
+      {% for network, url in config.extra.socials %}
+        <a class="social-link" href="{{ url }}" target="_blank" rel="noopener noreferrer" class="social-link {{ network }}" title="{{ network | capitalize }}">
+          <i class="fab fa-{{ network }}"></i>
+        </a>
+      {% endfor %}
+    </div>
   </div>
 {% endblock content %}
