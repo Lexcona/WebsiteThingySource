@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ get_url(path="styles/blog.css") }}">
+
+<div class="blog-index">
+    <h1 class="title">
+      {{ section.title }}
+    </h1>
+    <div class="blog-list">
+        {% for page in section.pages %}
+        <div class="blog-listing">
+            <h2 class="blog-page-button"><a class="blog-page-link" href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
+            <hr>
+            <p class="blog-listing-description">{{ page.description }}</p>
+            <p class="blog-listing-publish">{{ page.date | date(format="%B %e, %Y. %l:%M %p") }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
