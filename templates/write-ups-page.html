@@ -2,6 +2,7 @@
 
 {% block content %}
 <link rel="stylesheet" href="{{ get_url(path="styles/blog-page.css") }}">
+<script defer src="{{ get_url(path="scripts/expand-imgs.js") }}"></script>
 
 <article class="blog-post">
   <h1 class="title">
@@ -10,4 +11,11 @@
   <p class="subtitle"><strong>{{ page.date | date(format="%B %e, %Y. %l:%M %p") }}</strong></p>
   {{ page.content | safe }}
 </article>
+
+<div id="overlay" onclick="closeOverlay();">
+    <div class="overlay-content" onclick="event.stopPropagation();">
+        <img id="overlay-img" src="">
+    </div>
+    <button id="overlay-close" onclick="closeOverlay();">X</button>
+</div>
 {% endblock content %}
