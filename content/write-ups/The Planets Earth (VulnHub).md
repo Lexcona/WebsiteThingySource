@@ -441,9 +441,13 @@ undefined8 main(void)
 ```
 
 So lets try to deconstruct this. So we know that the iVar1 is an int that acts like a bool of some type. Looking at the Unix C API we can see that access is to see if the application can access the file ([Linux Manual access](https://www.man7.org/linux/man-pages/man2/access.2.html))
+
 So we can rename iVar1 to doesExist.
+
 Based on what we found out about magic cipher it looks like local_1078 is the output decrypted path for the program to check so we can just rename that to decryptedPath.
+
 We can also rename local_58 to pathDecryptionKey based on earlier discoveries. So lets change up the hex data to actual numbers so we can understand it a bit more.
+
 So after some looking we see that 0x11 equals to the number 17. 0xd also equals to 13 so we can change that one over.
 
 Now that we know those things let's see what the first decryption key is, eulbelap which in Unix everything is reversed so when we reverse it, it translates to paleblue.
